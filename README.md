@@ -1,8 +1,10 @@
-## Data Engineering Zoomcamp 2025 Cohort
 
 # DataTalks.Club – Data Engineering Zoomcamp 2025
 
 Ce dépôt contient mes devoirs et exercices réalisés dans le cadre du **Data Engineering Zoomcamp 2025** proposé par [DataTalks.Club](https://datatalks.club/).
+
+![Logo Zoomcamp](images/de-image.png)
+
 
 
 ## 🎯 Objectifs

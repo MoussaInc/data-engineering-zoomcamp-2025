@@ -1,0 +1,17 @@
+FROM jupyter/datascience-notebook:latest
+
+# 1. Configure l'utilisateur existant (jovyan) au lieu d'en créer un nouveau
+USER root
+RUN mv /home/jovyan /home/mballo && \
+    usermod -d /home/mballo -l mballo jovyan && \
+    chown -R mballo /home/mballo && \
+    mkdir -p /home/mballo/work /home/mballo/data && \
+    chown -R mballo /home/mballo
+
+# 2. Installation des dépendances
+COPY requirements.txt /tmp/
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+# 3. Configuration finale
+USER mballo
+WORKDIR /home/mballo/work

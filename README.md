@@ -6,13 +6,6 @@ Ce dépôt contient mes devoirs et exercices réalisés dans le cadre du **Data 
 ![Logo Zoomcamp](images/de-image.png)
 
 
-
-## 🎯 Objectifs
-
-- Approfondir mes compétences en ingénierie des données
-- Maîtriser les outils utilisés dans des environnements data modernes
-- Travailler sur des projets concrets et reproductibles
-
 ## 👤 Auteur
 
 **Moussa Mballo**  
@@ -27,7 +20,7 @@ GitHub : [@MoussaInc](https://github.com/MoussaInc)
 
 [**Module 1: Introduction & Prerequisites: docker-terraform**](01-docker-terraform/)
 
-The answers are described in the following folder: 
+You’ll find the answers in the following directory: 
 
 * [Homework](chap01-docker-terraform/homework_01.md)
 
@@ -69,7 +62,7 @@ More information [here](project.md)
 
 ---
 
-Un grand merci aux formateurs et contributeurs pour cette excellente formation gratuite :
+A big thank you to the instructors and contributors for this excellent free course:
 
 - Alexey Grigorev 
 - Victoria Perez Mola   
@@ -78,5 +71,5 @@ Un grand merci aux formateurs et contributeurs pour cette excellente formation g
 - Will Russell  
 - Anna Geller  
 
-Consultez le dépôt officiel ici : [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+Check out the official repository here : [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 

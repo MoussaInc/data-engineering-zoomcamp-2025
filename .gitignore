@@ -1,0 +1,78 @@
+# -----------------------
+# Terraform
+# -----------------------
+**/.terraform/**
+**/*.tfstate
+**/*.tfstate.*
+**/*.tfvars
+**/terraform.tfvars.json
+**/terraform.lock.hcl
+
+# Fichiers sensibles / clés
+**/keys/*.json
+**/*.key
+**/terraform-vm-key.json
+
+# -----------------------
+# Docker
+# -----------------------
+**/docker-compose.yaml
+**/Dockerfile
+
+# -----------------------
+# Données / exports
+# -----------------------
+**/*.csv
+**/*.csv.gz
+
+# Remarque: extension .jpmb et fichiers spécifiques — adapte si besoin
+**/*.jpmb
+**/jpmp_dredgeable
+**/depth_dredgeable
+
+# -----------------------
+# Python
+# -----------------------
+**/__pycache__/
+**/*.py[cod]
+**/*.log.py
+
+# -----------------------
+# Systèmes / OS
+# -----------------------
+**/.DS_Store
+**/Thumbs.db
+
+# -----------------------
+# Environnements virtuels
+# -----------------------
+**/venv/
+**/.venv/
+
+# -----------------------
+# Dépendances
+# -----------------------
+**/requirements.txt
+
+# -----------------------
+# IDEs & éditeurs
+# -----------------------
+**/.vscode/
+**/.idea/
+
+# -----------------------
+# Fichiers temporaires
+# -----------------------
+**/*~
+**/*.bak
+**/*.swp
+
+# -----------------------
+# Fichiers spécifiques au projet (à adapter)
+# -----------------------
+**/moment.md
+**/hopet_vg_last_data.jpmb
+**/call_pone_backup.csv
+
+terraform/terra-runner/ny_taxi_postgres_data
+terraform/

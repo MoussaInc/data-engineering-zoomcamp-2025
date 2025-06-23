@@ -21,14 +21,14 @@ Run docker with the `python:3.12.8` image in an interactive mode, use the entryp
 What's the version of `pip` in the image?
 
 - [x] 24.3.1
-- [] 24.2.1
-- [] 23.3.1
-- [] 23.2.1
+- 24.2.1
+- 23.3.1
+- 23.2.1
 
 ```bash
 docker run -it python:3.12.8 pip --version
 ```
-*Sortie :* `pip 24.3.1 from /usr/local/lib/python3.12/site-packages/pip (python 3.12)`
+*Output :* `pip 24.3.1 from /usr/local/lib/python3.12/site-packages/pip (python 3.12)`
 
 
 ## Question 2. Understanding Docker networking and docker-compose
@@ -67,10 +67,10 @@ volumes:
     name: vol-pgadmin_data
 ```
 
-- [] postgres:5433
-- [] localhost:5432
-- [] db:5433
-- [] postgres:5432
+- postgres:5433
+- localhost:5432
+- db:5433
+- postgres:5432
 - [x] db:5432
 
 If there are more than one answers, select only one of them
@@ -111,11 +111,11 @@ During the period of October 1st 2019 (inclusive) and November 1st 2019 (exclusi
 
 Answers:
 
-- [] 104,802;  197,670;  110,612;  27,831;  35,281
+- 104,802;  197,670;  110,612;  27,831;  35,281
 - [x] 104,802;  198,924;  109,603;  27,678;  35,189
-- [] 104,793;  201,407;  110,612;  27,831;  35,281
-- [] 104,793;  202,661;  109,603;  27,678;  35,189
-- [] 104,838;  199,013;  109,645;  27,688;  35,202
+- 104,793;  201,407;  110,612;  27,831;  35,281
+- 104,793;  202,661;  109,603;  27,678;  35,189
+- 104,838;  199,013;  109,645;  27,688;  35,202
 
 *Requête SQL :**
 ```sql
@@ -137,9 +137,9 @@ Use the pick up time for your calculations.
 
 Tip: For every day, we only care about one single trip with the longest distance. 
 
-- [] 2019-10-11
-- [] 2019-10-24
-- [] 2019-10-26
+- 2019-10-11
+- 2019-10-24
+- 2019-10-26
 - [x] 2019-10-31
 
 *Requête SQL :**
@@ -164,9 +164,9 @@ Which were the top pickup locations with over 13,000 in
 Consider only `lpep_pickup_datetime` when filtering by date.
  
 - [x] East Harlem North, East Harlem South, Morningside Heights
-- [] East Harlem North, Morningside Heights
-- [] Morningside Heights, Astoria Park, East Harlem South
-- [] Bedford, East Harlem North, Astoria Park
+- East Harlem North, Morningside Heights
+- Morningside Heights, Astoria Park, East Harlem South
+- Bedford, East Harlem North, Astoria Park
 
 *Requête SQL :**
 ```sql
@@ -195,10 +195,10 @@ Note: it's `tip` , not `trip`
 
 We need the name of the zone, not the ID.
 
-- [] Yorkville West
+- Yorkville West
 - [x] JFK Airport
-- [] East Harlem North
-- [] East Harlem South
+- East Harlem North
+- East Harlem South
 
 *Requête SQL :**
 ```sql
@@ -240,11 +240,11 @@ Which of the following sequences, **respectively**, describes the workflow for:
 3. Remove all resources managed by terraform`
 
 Answers:
-- [] terraform import, terraform apply -y, terraform destroy
-- [] teraform init, terraform plan -auto-apply, terraform rm
-- [] terraform init, terraform run -auto-approve, terraform destroy
+- terraform import, terraform apply -y, terraform destroy
+- teraform init, terraform plan -auto-apply, terraform rm
+- terraform init, terraform run -auto-approve, terraform destroy
 - [x] terraform init, terraform apply -auto-approve, terraform destroy
-- [] terraform import, terraform apply -y, terraform rm
+- terraform import, terraform apply -y, terraform rm
 
 
 ## Submitting the solutions

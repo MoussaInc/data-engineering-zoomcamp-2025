@@ -117,7 +117,7 @@ Answers:
 - 104,793;  202,661;  109,603;  27,678;  35,189
 - 104,838;  199,013;  109,645;  27,688;  35,202
 
-*Requête SQL :**
+*SQL query :**
 ```sql
 SELECT
     SUM(CASE WHEN trip_distance <= 1 THEN 1 ELSE 0 END) AS "Up to 1 mile",
@@ -142,7 +142,7 @@ Tip: For every day, we only care about one single trip with the longest distance
 - 2019-10-26
 - [x] 2019-10-31
 
-*Requête SQL :**
+*SQL query :**
 ```sql
 SELECT 
     DATE(lpep_pickup_datetime) AS pickup_day,
@@ -168,7 +168,7 @@ Consider only `lpep_pickup_datetime` when filtering by date.
 - Morningside Heights, Astoria Park, East Harlem South
 - Bedford, East Harlem North, Astoria Park
 
-*Requête SQL :**
+*SQL query :**
 ```sql
 SELECT
 	z."Zone" AS Pickup_zone,
@@ -200,7 +200,7 @@ We need the name of the zone, not the ID.
 - East Harlem North
 - East Harlem South
 
-*Requête SQL :**
+*SQL query :**
 ```sql
 SELECT 
     z_drop."Zone" AS dropoff_zone,

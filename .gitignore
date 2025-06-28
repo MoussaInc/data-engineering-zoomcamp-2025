@@ -7,6 +7,10 @@
 **/*.tfvars
 **/terraform.tfvars.json
 **/terraform.lock.hcl
+.terraform/
+terraform.tfstate*
+crash.log
+terraform.tfvars
 
 # Fichiers sensibles / clés
 **/keys/*.json
@@ -18,6 +22,9 @@
 # -----------------------
 **/docker-compose.yaml
 **/Dockerfile
+kestra/logs/
+docker/*.env
+
 
 # -----------------------
 # Données / exports

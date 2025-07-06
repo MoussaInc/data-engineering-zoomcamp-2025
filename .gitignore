@@ -84,3 +84,4 @@ docker/*.env
 terraform/terra-runner/ny_taxi_postgres_data
 terraform/
 docker/*.json
+docker/*.json

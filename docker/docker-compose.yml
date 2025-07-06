@@ -28,10 +28,13 @@ services:
     user: "root"
     command: server standalone
     volumes:
+      - /home/mballo/data-engineering-zoomcamp-2025/docker/zoomcamp-de-465007-ea25c88f3a1d.json:/app/secrets/gcp-key.json:ro
       - kestra-data:/app/storage
       - /var/run/docker.sock:/var/run/docker.sock
       - /tmp/kestra-wd:/tmp/kestra-wd
-      - ../kestra/flows:/app/flows   # ← ajoute ceci
+      - ../kestra/flows:/app/flows
+      - ./kestra:/app/kestra
+      - ./chap02-workflow-orchestration/dbt/ny_taxi_dbt:/app/dbt/ny_taxi_dbt
     environment:
       KESTRA_CONFIGURATION: |
         datasources:
@@ -58,9 +61,11 @@ services:
             tmpDir:
               path: /tmp/kestra-wd/tmp
           url: http://localhost:8080/
+      KESTRA_SECRETS__TYPE: env
     ports:
-      - "8080:8080"
-      - "8081:8081"
+    - "8080:8080"
+    - "8081:8081"
     depends_on:
       postgres:
         condition: service_started
+

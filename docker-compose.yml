@@ -30,8 +30,10 @@ services:
     user: "root"
     command: server standalone
     volumes:
+      - /home/mballo/data-engineering-zoomcamp-2025/docker/zoomcamp-de-465007-ea25c88f3a1d.json:/app/secrets/gcp-key.json:ro
       - kestra-storage:/app/storage
-      - ./kestra/flows:/app/flows 
+      - ./kestra/flows:/app/flows
+      - ./chap02-workflow-orchestration/dbt/ny_taxi_dbt:/app/dbt/ny_taxi_dbt
       - /var/run/docker.sock:/var/run/docker.sock
       - /tmp/kestra-wd:/tmp/kestra-wd
     environment:

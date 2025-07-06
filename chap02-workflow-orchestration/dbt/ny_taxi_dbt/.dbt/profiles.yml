@@ -1,0 +1,12 @@
+ny_taxi_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres
+      user: kestra
+      password: k3str4
+      dbname: kestra
+      schema: analytics
+      threads: 4
+      port: 5432

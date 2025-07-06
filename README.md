@@ -65,10 +65,10 @@ More information [here](project.md)
 A big thank you to the instructors and contributors for this excellent free course:
 
 - Alexey Grigorev 
+- Will Russell 
 - Victoria Perez Mola   
 - Michael Shoemaker  
-- Zach Wilson  
-- Will Russell  
+- Zach Wilson   
 - Anna Geller  
 
 Check out the official repository here : [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)

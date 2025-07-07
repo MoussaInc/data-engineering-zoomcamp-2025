@@ -1,0 +1,29 @@
+id: test_gcp_kv
+namespace: zoomcamp
+
+tasks:
+
+  - id: set_project
+    type: io.kestra.plugin.core.kv.Set
+    key: GCP_PROJECT_ID
+    value: "zoomcamp-de-465007"
+    kvType: STRING
+
+
+  - id: set_location
+    type: io.kestra.plugin.core.kv.Set
+    key: GCP_LOCATION
+    value: "EUROPE-WEST1"
+    kvType: STRING
+
+  - id: set_bucket
+    type: io.kestra.plugin.core.kv.Set
+    key: GCP_BUCKET_NAME
+    value: "ny_taxi_bucket_zoomcamp"
+    kvType: STRING
+
+  - id: set_dataset
+    type: io.kestra.plugin.core.kv.Set
+    key: GCP_DATASET
+    value: "ny_taxi_dataset_zoomcamp"
+    kvType: STRING

@@ -1,7 +1,0 @@
-
-id: my_first_flow
-namespace: default
-tasks:
-  - id: hello
-    type: io.kestra.core.tasks.debugs.Echo
-    message: "Hello, from Kestra!"

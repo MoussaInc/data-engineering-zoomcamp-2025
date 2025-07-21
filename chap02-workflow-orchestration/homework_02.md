@@ -44,6 +44,16 @@ Complete the Quiz shown below. It’s a set of 6 multiple-choice questions to te
 - 18,324,219
 - 29,430,127
 
+*SQL query :**
+```sql
+SELECT 
+    COUNT(*)
+FROM 
+    `zoomcamp-de-465007.ny_taxi_dataset_zoomcamp.yellow_tripdata` 
+WHERE 
+    DATE(tpep_pickup_datetime) BETWEEN "2021-03-01" AND "2021-03-31";  
+```
+
 4) How many rows are there for the `Green` Taxi data for all CSV files in the year 2020?
 - 5,327,301
 - 936,199

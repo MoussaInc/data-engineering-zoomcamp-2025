@@ -27,8 +27,8 @@ You’ll find the answers in the following directory:
 
 [**Module 2: Workflow Orchestration**](02-workflow-orchestration)
 
-* [Homework](ch02-workflow-orchestration/homework_02.md)
-* Office hours
+* [Homework](chap02-workflow-orchestration/homework_02.md)
+
 
 [**Workshop 1: Data Ingestion**](workshops/dlt/README.md)
 

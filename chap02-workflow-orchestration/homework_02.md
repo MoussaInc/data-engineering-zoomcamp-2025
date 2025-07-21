@@ -51,7 +51,7 @@ SELECT
 FROM 
     `zoomcamp-de-465007.ny_taxi_dataset_zoomcamp.yellow_tripdata` 
 WHERE 
-    DATE(tpep_pickup_datetime) BETWEEN "2021-03-01" AND "2021-03-31";  
+    DATE(tpep_pickup_datetime) BETWEEN "2020-01-01" AND "2020-12-31";  
 ```
 
 4) How many rows are there for the `Green` Taxi data for all CSV files in the year 2020?

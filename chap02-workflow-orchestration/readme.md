@@ -2,7 +2,9 @@
 🎯 Objectif Réalisé
 
 Automatiser l'ingestion et la transformation des données de taxis (vert et jaune) de New York avec une approche scalable et industrialisée.
+
 🔄 Parcours d'Implémentation
+
 1️⃣ Phase Locale avec PostgreSQL
 
     Ingestion des données Green Taxis 🟩 via Kestra
@@ -20,6 +22,7 @@ Automatiser l'ingestion et la transformation des données de taxis (vert et jaun
     Challenge surmonté : Gestion des volumes importants de données Yellow Taxis 🟨
 
 🛠️ Fonctionnalités Implémentées avec Kestra
+
 ✅ Gestion du Backfill
 
     Traitement automatique des périodes manquantes (notamment 2021)
@@ -41,19 +44,18 @@ Automatiser l'ingestion et la transformation des données de taxis (vert et jaun
     Gestion d'erreurs et reprises automatiques
 
 📁 Structure du Projet
-text
 
-data-engineering-zoomcamp-2025/
-├── docker-compose.yml          # Orchestration Docker
-├── chap02-workflow-orchestration/
-│   ├── kestra/
-│   │   └── flows/             # Workflows Kestra
-│   │       ├── gcp_ny_taxi_scheduled.yaml
-│   │       ├── my_postgres_ny_taxi_scheduled.yaml
-│   │       └── ...
-│   └── dbt/                   # Transformations DBT
-├── chap03-data-warehouse/     # Configuration BigQuery
-└── ...
+    data-engineering-zoomcamp-2025/
+    ├── docker-compose.yml          # Orchestration Docker
+    ├── chap02-workflow-orchestration/
+    │   ├── kestra/
+    │   │   └── flows/             # Workflows Kestra
+    │   │       ├── gcp_ny_taxi_scheduled.yaml
+    │   │       ├── my_postgres_ny_taxi_scheduled.yaml
+    │   │       └── ...
+    │   └── dbt/                   # Transformations DBT
+    ├── chap03-data-warehouse/     # Configuration BigQuery
+    └── ...
 
 🚀 Workflows Disponibles
 
@@ -81,3 +83,11 @@ docker-compose up -d
 
 # Vérifier le statut
 docker-compose ps
+
+### Accès aux interfaces :
+
+    Kestra UI : http://localhost:8080/ui/ (sans authentification)
+
+    PGAdmin : http://localhost:8085/ (admin@admin.com / root)
+
+    PostgreSQL Zoomcamp : localhost:5433 (zoomcamp/zoomcamp)

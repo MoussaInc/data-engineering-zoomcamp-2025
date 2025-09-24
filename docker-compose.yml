@@ -1,3 +1,4 @@
+version: '3.8'
 
 volumes:
   postgres-kestra-data:
@@ -8,7 +9,7 @@ volumes:
     driver: local
 
 services:
-  postgres:
+  postgres-kestra:
     image: postgres:15
     container_name: postgres-kestra
     volumes:
@@ -18,29 +19,39 @@ services:
       POSTGRES_USER: kestra
       POSTGRES_PASSWORD: k3str4
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
+      test: ["CMD-SHELL", "pg_isready -U kestra -d kestra"]
       interval: 30s
       timeout: 10s
       retries: 10
 
+  postgres-zoomcamp:
+    image: postgres:15
+    container_name: postgres-zoomcamp
+    environment:
+      POSTGRES_USER: zoomcamp
+      POSTGRES_PASSWORD: zoomcamp
+      POSTGRES_DB: zoomcamp
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres-zoomcamp-data:/var/lib/postgresql/data
+
   kestra:
-    image: kestra/kestra:v0.20.7
+    image: kestra/kestra:latest
     container_name: kestra
     pull_policy: always
     user: "root"
     command: server standalone
     volumes:
-      - /home/mballo/data-engineering-zoomcamp-2025/docker/zoomcamp-de-465007-ea25c88f3a1d.json:/app/secrets/gcp-key.json:ro
       - kestra-storage:/app/storage
-      - ./kestra/flows:/app/flows
-      - ./chap02-workflow-orchestration/dbt/ny_taxi_dbt:/app/dbt/ny_taxi_dbt
       - /var/run/docker.sock:/var/run/docker.sock
       - /tmp/kestra-wd:/tmp/kestra-wd
+      - ./chap02-workflow-orchestration/kestra/flows:/app/flows
     environment:
       KESTRA_CONFIGURATION: |
         datasources:
           postgres:
-            url: jdbc:postgresql://postgres:5432/kestra
+            url: jdbc:postgresql://postgres-kestra:5432/kestra
             driverClassName: org.postgresql.Driver
             username: kestra
             password: k3str4
@@ -48,10 +59,14 @@ services:
           server:
             basicAuth:
               enabled: false
-              username: "admin@kestra.io"
-              password: kestra
           repository:
             type: postgres
+          flows:
+            repository:
+              type: file
+              file:
+                path: /app/flows
+                watch: true
           storage:
             type: local
             local:
@@ -66,20 +81,8 @@ services:
       - "8080:8080"
       - "8081:8081"
     depends_on:
-      postgres:
+      postgres-kestra:
         condition: service_healthy
-
-  postgres_zoomcamp:
-    image: postgres:15
-    container_name: postgres-zoomcamp
-    environment:
-      POSTGRES_USER: zoomcamp
-      POSTGRES_PASSWORD: zoomcamp
-      POSTGRES_DB: zoomcamp
-    ports:
-      - "5433:5432"
-    volumes:
-      - postgres-zoomcamp-data:/var/lib/postgresql/data
 
   pgadmin:
     image: dpage/pgadmin4
@@ -90,5 +93,5 @@ services:
     ports:
       - "8085:80"
     depends_on:
-      - postgres
-      - postgres_zoomcamp
+      - postgres-kestra
+      - postgres-zoomcamp

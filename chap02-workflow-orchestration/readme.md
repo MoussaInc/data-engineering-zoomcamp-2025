@@ -1,9 +1,7 @@
 📊 Chapitre 2 : Workflow Orchestration avec Kestra
 🎯 Objectif Réalisé
 
-Automatiser l'ingestion et la transformation des données de taxis (vert et jaune) de New York avec une approche scalable et industrialisée.
-
-🔄 Parcours d'Implémentation
+🔄 Automatiser l'ingestion et la transformation des données de taxis (vert et jaune) de New York avec une approche scalable et industrialisée.
 
 1️⃣ Phase Locale avec PostgreSQL
 
@@ -35,13 +33,13 @@ Automatiser l'ingestion et la transformation des données de taxis (vert et jaun
 
     Patterns de workflow réutilisables et modulaires
 
-✅ Orchestration Intelligente
+✅ Orchestration: 
 
     Déclenchement par planning avec Schedule triggers
 
     Monitoring intégré des exécutions
 
-    Gestion d'erreurs et reprises automatiques
+    <!-- Gestion d'erreurs et reprises automatiques -->
 
 📁 Structure du Projet
 
@@ -60,6 +58,7 @@ Automatiser l'ingestion et la transformation des données de taxis (vert et jaun
 🚀 Workflows Disponibles
 
 Les workflows Kestra sont organisés par environnement :
+
 🌐 Cloud (GCP)
 
     gcp_ny_taxi_scheduled.yaml : Pipeline complet cloud avec backfill
@@ -83,6 +82,8 @@ docker-compose up -d
 
 # Vérifier le statut
 docker-compose ps
+
+```
 
 ### Accès aux interfaces :
 
